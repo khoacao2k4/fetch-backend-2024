@@ -1,0 +1,31 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+For this coding exercise:
+a. I chose Python language for coding because not only it's the language that I am confident the most but it also include libraries includes powerful modules,
+such as datetime, which simplifies handling timestamps in this project.
+b. I used Flask, a Python-based web framework for REST API creation because it's lightweight and simple to use, which is a fit for this exercise. If this project were to scale bigger
+to big and real-time such as Fetch right now, I'd use framework such as Express.js, Django, Ruby on Rails, etc.
+c. For database, I used SQLite for storing transaction and payer's data because it's for simplicity and lightweight needs and requires no additional setup, compared to other databases such as PostgreSQL or MongoDB.
+d. Lastly, I chose SQLAlchemy as final touch as connection between Flask and SQLite. SQLAlchemy’s ORM makes it easy to map database tables to Python classes, simplifying database operations.
+
+2. What are the advantages and disadvantages of your solution?
+
+- Advantages:
++ Clarity and Readability: Python and Flask promote clean and concise code, making the solution easy to understand and maintain.
++ Scalability: SQLAlchemy enables easy migration from SQLite to other databases like PostgreSQL or MySQL for larger-scale deployments.
++ Standards Compliance: The solution follows RESTful API principles with clear endpoints for add, spend, and balance.
+- Disadvantages:
++ SQLite Limitations: While SQLite is sufficient for small-scale use, it lacks advanced features like concurrent writes and scalability, which could be a bottleneck in high-demand scenarios. 
+Therefore in a large-scale application, I'd use other frameworks as mentioned above.
++ In-memory Caching: The current solution doesn't implement caching, so while the coding exercise does not involve lots of dataset,
+frequent queries on large datasets may impact performance.
++ Algorithm: my current algorithm mostly correct for case where we add transaction according to the timeline. If were to add differently,
+such as adding transaction on 25/12/2024 then 24/12/2024, there may be cases result can went wrong, especially when the transaction's points is negative.
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+
+My favorite personal project is FashionistAI, a virtual fashion assistant that helps users decide what to wear for any occasion by combining AI-powered style recommendations with wardrobe management. 
+The app, built with Flask, React Native, and MongoDB, allows users to upload and categorize clothing items while receiving personalized outfit suggestions using GPT. 
+One of the biggest challenges was effective communication within the team, as we had to align on the design, features, and development pace despite varying levels of expertise and schedules. 
+Additionally, I faced the technical challenge of independently training a clothing classification model, which involved searching for reliable datasets, cleaning and preprocessing data, and iterating on machine learning models to achieve acceptable accuracy. 
+Still, this dual challenge of managing collaboration and solving technical hurdles made the project both demanding and rewarding, enhancing my skills in teamwork and technical problem-solving.
