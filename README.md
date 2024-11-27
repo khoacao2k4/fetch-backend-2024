@@ -7,8 +7,8 @@
 - `bash` for running the test script
 
 ## Setup Steps
-### Setting Up the Virtual Environment
-1. Create a virtual environment and activate:
+### 1. Setting Up the Virtual Environment
+Create a virtual environment and activate:
 
 Mac/Linux
 ```bash
@@ -21,17 +21,20 @@ Windows
 python -m venv venv
 venv\Scripts\activate
 ```
-### Installing Dependencies
+
+### 2. Installing Dependencies
 With the virtual environment activated, install the required dependencies using the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
-### Running the backend server
+
+### 3. Running the backend server
 Start the Flask server, which will run on http://127.0.0.1:8000 by default:
 ```bash
 python3 main.py
 ```
-4. Testing the API
+
+### 4. Testing the API
 
 - **Using curl**: Test the API endpoints using curl commands:
 
@@ -57,7 +60,7 @@ python3 main.py
     ./test_sol.sh
     ```
 
-### Cleanup
+### 5. Cleanup
 When finished, deactivate the virtual environment and stop the server process.
 ```bash
 deactivate
@@ -67,5 +70,5 @@ deactivate
 When run for the first time, a `SQLite` database will be created and be put into folder `instance`, which will persistent (keep the same records as before) when run the server later times. To reset, just remove the folder! 
 
 ```bash
-rm -r instance
+rm -r instance -y
 ```
